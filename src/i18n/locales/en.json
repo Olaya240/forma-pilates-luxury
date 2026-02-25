@@ -1,0 +1,276 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "schedule": "Schedule",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "location": "Rabat, Morocco",
+    "tagline": "A new era of Pilates",
+    "bookSession": "Book a Session",
+    "contactUs": "Contact Us"
+  },
+  "about": {
+    "badge": "Welcome to FORMA",
+    "title": "Experience the Art of Movement",
+    "p1": "At FORMA Pilates, we believe in the transformative power of mindful movement. Our studio offers an exclusive sanctuary where wellness meets luxury.",
+    "p2": "Equipped with state-of-the-art Pilates Reformers, we provide both private and group sessions tailored to your individual needs. Whether you're a beginner or an experienced practitioner, our expert instructors guide you through each movement with precision and care.",
+    "p3": "Step into our calm, meticulously designed space and discover a new approach to strength, flexibility, and inner balance.",
+    "reformers": "Reformers",
+    "classesWeek": "Classes/Week",
+    "members": "Members"
+  },
+  "benefits": {
+    "badge": "Why Pilates",
+    "title": "Transform Your Body & Mind",
+    "description": "Pilates is more than just exercise—it's a holistic approach to wellness that strengthens, lengthens, and balances your entire body. At FORMA, we combine classical techniques with modern innovations for optimal results.",
+    "happyMembers": "Happy Members",
+    "yearsCombined": "Years Combined",
+    "satisfaction": "Satisfaction",
+    "items": {
+      "coreStrength": {
+        "title": "Core Strength",
+        "description": "Build a powerful foundation with exercises targeting deep stabilizing muscles"
+      },
+      "betterPosture": {
+        "title": "Better Posture",
+        "description": "Correct alignment issues and develop awareness of your body positioning"
+      },
+      "flexibility": {
+        "title": "Flexibility",
+        "description": "Increase range of motion through controlled, flowing movements"
+      },
+      "mindBody": {
+        "title": "Mind-Body Connection",
+        "description": "Enhance mental clarity and reduce stress through focused breathing"
+      },
+      "injuryPrevention": {
+        "title": "Injury Prevention",
+        "description": "Strengthen supporting muscles to protect joints and prevent injuries"
+      },
+      "allLevels": {
+        "title": "All Fitness Levels",
+        "description": "Adaptable exercises suitable for beginners to advanced practitioners"
+      }
+    }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Find Your Perfect Fit",
+    "description": "Choose from our range of sessions designed to meet your needs and preferences",
+    "mostPopular": "Most Popular",
+    "bookNow": "Book Now",
+    "items": {
+      "private": {
+        "title": "Private Sessions",
+        "subtitle": "One-on-One Training",
+        "description": "Personalized attention with customized programs designed for your specific goals, body type, and fitness level.",
+        "features": ["Personal assessment", "Tailored program", "Flexible scheduling", "Progress tracking"]
+      },
+      "duo": {
+        "title": "Duo Sessions",
+        "subtitle": "Partner Training",
+        "description": "Share the experience with a friend or partner while still receiving personalized guidance and corrections.",
+        "features": ["Partner workout", "Individual attention", "Shared cost", "Fun atmosphere"]
+      },
+      "group": {
+        "title": "Group Classes",
+        "subtitle": "Small Group Training",
+        "description": "Dynamic group sessions in an intimate setting, limited to ensure quality instruction and personal attention.",
+        "features": ["Community vibe", "Structured programs", "Motivating environment", "Cost effective"]
+      }
+    },
+    "duration": "50 min",
+    "capacity": {
+      "one": "1 person",
+      "two": "2 people",
+      "group": "4-6 people"
+    },
+    "intensity": {
+      "custom": "Customized",
+      "moderate": "Moderate",
+      "allLevels": "All levels"
+    }
+  },
+  "instructors": {
+    "badge": "Our Team",
+    "title": "Expert Instructors",
+    "description": "Our certified instructors bring passion, expertise, and personalized attention to every session",
+    "experience": "Experience",
+    "roles": {
+      "founder": "Founder & Lead Instructor",
+      "senior": "Senior Instructor",
+      "instructor": "Instructor"
+    },
+    "specialties": {
+      "yasmine": "Classical Pilates, Rehabilitation",
+      "sara": "Reformer, Pre/Postnatal",
+      "nadia": "Mat Pilates, Barre"
+    }
+  },
+  "schedule": {
+    "badge": "Weekly Classes",
+    "title": "Class Schedule",
+    "description": "Choose from our carefully curated schedule designed to fit your lifestyle",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "dayOf": "Day",
+    "of": "of",
+    "allClasses": "All classes are 50 minutes",
+    "bookingRequired": "Advanced booking required • Limited spots available",
+    "swipeHint": "← Swipe to navigate days →"
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Choose Your Package",
+    "description": "Flexible options designed to support your Pilates journey",
+    "mostPopular": "MOST POPULAR",
+    "getStarted": "Get Started",
+    "currency": "MAD",
+    "plans": {
+      "single": {
+        "name": "Single Session",
+        "description": "Perfect for trying out FORMA",
+        "features": ["50-minute session", "Expert instruction", "All equipment included", "Flexible scheduling"]
+      },
+      "pack5": {
+        "name": "5-Class Pack",
+        "description": "Best for building consistency",
+        "features": ["5 × 50-minute sessions", "Valid for 2 months", "Priority booking", "Progress tracking"]
+      },
+      "pack10": {
+        "name": "10-Class Pack",
+        "description": "Most value for committed practitioners",
+        "features": ["10 × 50-minute sessions", "Valid for 3 months", "Priority booking", "Complimentary consultation"]
+      },
+      "unlimited": {
+        "name": "Unlimited Monthly",
+        "description": "Ultimate flexibility and access",
+        "features": ["Unlimited sessions", "30-day validity", "First priority booking", "Exclusive workshops"]
+      }
+    }
+  },
+  "gallery": {
+    "badge": "Our Space",
+    "title": "Gallery",
+    "description": "Step inside our serene sanctuary designed for transformation",
+    "loadMore": "Load More"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Members Say",
+    "description": "Join our community of satisfied practitioners",
+    "onGoogle": "on Google",
+    "verifiedReview": "Verified Google review",
+    "swipeHint": "← Swipe to see more →"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Common Questions",
+    "description": "Everything you need to know about FORMA Pilates",
+    "stillQuestions": "Still have questions?",
+    "teamHelp": "Our team is here to help you with anything you need",
+    "contactUs": "Contact Us",
+    "items": {
+      "experience": {
+        "q": "Do I need prior Pilates experience to join?",
+        "a": "Not at all! We welcome practitioners of all levels. Our instructors are trained to modify exercises for beginners while challenging advanced students. We recommend starting with a private session to assess your fitness level and goals."
+      },
+      "wear": {
+        "q": "What should I wear to a Pilates session?",
+        "a": "Wear comfortable, form-fitting clothing that allows freedom of movement. Avoid loose or baggy clothes as they can interfere with exercises. We practice barefoot or in grip socks (available for purchase at the studio)."
+      },
+      "frequency": {
+        "q": "How often should I practice Pilates?",
+        "a": "For optimal results, we recommend 2-3 sessions per week. However, even one session weekly can provide benefits. Consistency is more important than frequency—find a schedule that works for your lifestyle."
+      },
+      "matVsReformer": {
+        "q": "What is the difference between mat and reformer Pilates?",
+        "a": "Mat Pilates uses body weight for resistance on a floor mat. Reformer Pilates uses a specialized machine with springs providing adjustable resistance. The reformer offers more variety and can be gentler on joints while providing a more challenging workout."
+      },
+      "injuries": {
+        "q": "Can I do Pilates if I have injuries or physical limitations?",
+        "a": "Pilates is often recommended for rehabilitation! However, please inform us of any injuries or conditions before your first session. Our instructors can modify exercises to accommodate most limitations and help support your recovery."
+      },
+      "cancellation": {
+        "q": "What is your cancellation policy?",
+        "a": "We require 24 hours notice for cancellations. Late cancellations or no-shows will be charged the full session fee. We understand emergencies happen—please contact us as soon as possible if you need to reschedule."
+      },
+      "packages": {
+        "q": "Do you offer packages or memberships?",
+        "a": "Yes! We offer various packages for private, duo, and group sessions, as well as monthly memberships. Packages offer significant savings compared to single sessions. Visit our pricing section or contact us for details."
+      },
+      "parking": {
+        "q": "Is parking available at the studio?",
+        "a": "Yes, we have dedicated parking spaces for our clients. Street parking is also available in the surrounding area. Our studio is conveniently located and accessible by public transport as well."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Visit Us",
+    "description": "Ready to start your Pilates journey? We would love to welcome you",
+    "info": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "weekdays": "Mon-Fri: 9:00 AM - 7:00 PM",
+    "weekends": "Sat-Sun: 10:00 AM - 12:00 PM",
+    "whatsapp": "WhatsApp Message",
+    "bookSession": "Book a Session"
+  },
+  "footer": {
+    "description": "A new era of Pilates in Rabat, Morocco. Luxury wellness designed for transformation.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "language": "Language"
+  },
+  "booking": {
+    "title": "Book a Session",
+    "description": "Fill out the form below and we will contact you to confirm your booking.",
+    "fields": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Session Type",
+      "preferredDate": "Preferred Date"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "phone": "0600000000",
+      "service": "Select a session type",
+      "date": "Select a date"
+    },
+    "errors": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name must be less than 100 characters",
+      "emailInvalid": "Invalid email address",
+      "phoneMin": "Phone must be at least 8 digits",
+      "phoneMax": "Phone must be less than 20 characters",
+      "serviceRequired": "Please select a session type",
+      "dateRequired": "Please select a date"
+    },
+    "submit": "Send Request",
+    "submitting": "Sending...",
+    "whatsappMessage": "Hello, I would like to book a session at FORMA Pilates.",
+    "success": {
+      "title": "Request Sent!",
+      "description": "We will contact you soon to confirm your booking."
+    }
+  }
+}

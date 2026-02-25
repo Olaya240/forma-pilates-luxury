@@ -1,0 +1,276 @@
+{
+  "nav": {
+    "about": "À Propos",
+    "services": "Services",
+    "team": "Équipe",
+    "schedule": "Horaires",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  },
+  "hero": {
+    "location": "Rabat, Maroc",
+    "tagline": "Une nouvelle ère du Pilates",
+    "bookSession": "Réserver une Séance",
+    "contactUs": "Nous Contacter"
+  },
+  "about": {
+    "badge": "Bienvenue chez FORMA",
+    "title": "L'Art du Mouvement",
+    "p1": "Chez FORMA Pilates, nous croyons au pouvoir transformateur du mouvement conscient. Notre studio offre un sanctuaire exclusif où le bien-être rencontre le luxe.",
+    "p2": "Équipés de Reformers Pilates haut de gamme, nous proposons des séances privées et collectives adaptées à vos besoins individuels. Que vous soyez débutant ou pratiquant expérimenté, nos instructeurs experts vous guident à chaque mouvement avec précision et attention.",
+    "p3": "Entrez dans notre espace calme et méticuleusement conçu et découvrez une nouvelle approche de la force, de la flexibilité et de l'équilibre intérieur.",
+    "reformers": "Reformers",
+    "classesWeek": "Cours/Semaine",
+    "members": "Membres"
+  },
+  "benefits": {
+    "badge": "Pourquoi le Pilates",
+    "title": "Transformez Votre Corps & Esprit",
+    "description": "Le Pilates est plus qu'un simple exercice—c'est une approche holistique du bien-être qui renforce, allonge et équilibre tout votre corps. Chez FORMA, nous combinons techniques classiques et innovations modernes pour des résultats optimaux.",
+    "happyMembers": "Membres Satisfaits",
+    "yearsCombined": "Années Combinées",
+    "satisfaction": "Satisfaction",
+    "items": {
+      "coreStrength": {
+        "title": "Force du Centre",
+        "description": "Construisez une base solide avec des exercices ciblant les muscles stabilisateurs profonds"
+      },
+      "betterPosture": {
+        "title": "Meilleure Posture",
+        "description": "Corrigez les problèmes d'alignement et développez la conscience de votre positionnement corporel"
+      },
+      "flexibility": {
+        "title": "Flexibilité",
+        "description": "Augmentez votre amplitude de mouvement grâce à des mouvements contrôlés et fluides"
+      },
+      "mindBody": {
+        "title": "Connexion Corps-Esprit",
+        "description": "Améliorez la clarté mentale et réduisez le stress grâce à une respiration concentrée"
+      },
+      "injuryPrevention": {
+        "title": "Prévention des Blessures",
+        "description": "Renforcez les muscles de soutien pour protéger les articulations et prévenir les blessures"
+      },
+      "allLevels": {
+        "title": "Tous Niveaux",
+        "description": "Exercices adaptables pour débutants comme pratiquants avancés"
+      }
+    }
+  },
+  "services": {
+    "badge": "Nos Services",
+    "title": "Trouvez Votre Formule",
+    "description": "Choisissez parmi notre gamme de séances conçues pour répondre à vos besoins et préférences",
+    "mostPopular": "Plus Populaire",
+    "bookNow": "Réserver",
+    "items": {
+      "private": {
+        "title": "Séances Privées",
+        "subtitle": "Entraînement Individuel",
+        "description": "Attention personnalisée avec des programmes adaptés à vos objectifs spécifiques, votre morphologie et votre niveau de forme.",
+        "features": ["Évaluation personnelle", "Programme sur mesure", "Horaires flexibles", "Suivi des progrès"]
+      },
+      "duo": {
+        "title": "Séances Duo",
+        "subtitle": "Entraînement à Deux",
+        "description": "Partagez l'expérience avec un ami ou partenaire tout en recevant des conseils et corrections personnalisés.",
+        "features": ["Entraînement à deux", "Attention individuelle", "Coût partagé", "Ambiance conviviale"]
+      },
+      "group": {
+        "title": "Cours Collectifs",
+        "subtitle": "Petit Groupe",
+        "description": "Séances dynamiques en petit groupe, limitées pour assurer une instruction de qualité et une attention personnalisée.",
+        "features": ["Esprit communautaire", "Programmes structurés", "Environnement motivant", "Économique"]
+      }
+    },
+    "duration": "50 min",
+    "capacity": {
+      "one": "1 personne",
+      "two": "2 personnes",
+      "group": "4-6 personnes"
+    },
+    "intensity": {
+      "custom": "Personnalisé",
+      "moderate": "Modéré",
+      "allLevels": "Tous niveaux"
+    }
+  },
+  "instructors": {
+    "badge": "Notre Équipe",
+    "title": "Instructeurs Experts",
+    "description": "Nos instructeurs certifiés apportent passion, expertise et attention personnalisée à chaque séance",
+    "experience": "Expérience",
+    "roles": {
+      "founder": "Fondatrice & Instructrice Principale",
+      "senior": "Instructrice Senior",
+      "instructor": "Instructrice"
+    },
+    "specialties": {
+      "yasmine": "Pilates Classique, Rééducation",
+      "sara": "Reformer, Pré/Postnatal",
+      "nadia": "Mat Pilates, Barre"
+    }
+  },
+  "schedule": {
+    "badge": "Cours Hebdomadaires",
+    "title": "Horaires des Cours",
+    "description": "Choisissez parmi notre planning soigneusement conçu pour s'adapter à votre style de vie",
+    "days": {
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "dayOf": "Jour",
+    "of": "sur",
+    "allClasses": "Tous les cours durent 50 minutes",
+    "bookingRequired": "Réservation obligatoire • Places limitées",
+    "swipeHint": "← Glissez pour naviguer →"
+  },
+  "pricing": {
+    "badge": "Tarifs",
+    "title": "Choisissez Votre Forfait",
+    "description": "Options flexibles conçues pour accompagner votre parcours Pilates",
+    "mostPopular": "PLUS POPULAIRE",
+    "getStarted": "Commencer",
+    "currency": "MAD",
+    "plans": {
+      "single": {
+        "name": "Séance Unique",
+        "description": "Idéal pour découvrir FORMA",
+        "features": ["Séance de 50 minutes", "Instruction experte", "Équipement inclus", "Horaires flexibles"]
+      },
+      "pack5": {
+        "name": "Pack 5 Cours",
+        "description": "Idéal pour la régularité",
+        "features": ["5 × séances de 50 min", "Valide 2 mois", "Réservation prioritaire", "Suivi des progrès"]
+      },
+      "pack10": {
+        "name": "Pack 10 Cours",
+        "description": "Meilleur rapport qualité-prix",
+        "features": ["10 × séances de 50 min", "Valide 3 mois", "Réservation prioritaire", "Consultation offerte"]
+      },
+      "unlimited": {
+        "name": "Mensuel Illimité",
+        "description": "Flexibilité et accès total",
+        "features": ["Séances illimitées", "Validité 30 jours", "Priorité absolue", "Ateliers exclusifs"]
+      }
+    }
+  },
+  "gallery": {
+    "badge": "Notre Espace",
+    "title": "Galerie",
+    "description": "Découvrez notre sanctuaire serein conçu pour la transformation",
+    "loadMore": "Voir Plus"
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "title": "Ce Que Disent Nos Membres",
+    "description": "Rejoignez notre communauté de praticiens satisfaits",
+    "onGoogle": "sur Google",
+    "verifiedReview": "Avis Google vérifié",
+    "swipeHint": "← Glissez pour voir plus →"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions Fréquentes",
+    "description": "Tout ce que vous devez savoir sur FORMA Pilates",
+    "stillQuestions": "Encore des questions ?",
+    "teamHelp": "Notre équipe est là pour vous aider",
+    "contactUs": "Nous Contacter",
+    "items": {
+      "experience": {
+        "q": "Ai-je besoin d'une expérience préalable en Pilates ?",
+        "a": "Pas du tout ! Nous accueillons les pratiquants de tous niveaux. Nos instructeurs sont formés pour adapter les exercices aux débutants tout en défiant les pratiquants avancés. Nous recommandons de commencer par une séance privée pour évaluer votre niveau et vos objectifs."
+      },
+      "wear": {
+        "q": "Que dois-je porter pour une séance ?",
+        "a": "Portez des vêtements confortables et ajustés permettant une liberté de mouvement. Évitez les vêtements amples qui peuvent gêner les exercices. Nous pratiquons pieds nus ou avec des chaussettes antidérapantes (disponibles au studio)."
+      },
+      "frequency": {
+        "q": "À quelle fréquence dois-je pratiquer le Pilates ?",
+        "a": "Pour des résultats optimaux, nous recommandons 2-3 séances par semaine. Cependant, même une séance hebdomadaire peut apporter des bénéfices. La régularité est plus importante que la fréquence."
+      },
+      "matVsReformer": {
+        "q": "Quelle est la différence entre Pilates mat et Reformer ?",
+        "a": "Le Pilates mat utilise le poids du corps pour la résistance sur un tapis. Le Pilates Reformer utilise une machine spécialisée avec des ressorts offrant une résistance ajustable. Le Reformer offre plus de variété et peut être plus doux pour les articulations."
+      },
+      "injuries": {
+        "q": "Puis-je faire du Pilates si j'ai des blessures ?",
+        "a": "Le Pilates est souvent recommandé pour la rééducation ! Cependant, informez-nous de toute blessure ou condition avant votre première séance. Nos instructeurs peuvent adapter les exercices pour accompagner la plupart des limitations."
+      },
+      "cancellation": {
+        "q": "Quelle est votre politique d'annulation ?",
+        "a": "Nous demandons un préavis de 24 heures pour les annulations. Les annulations tardives ou absences seront facturées. Contactez-nous dès que possible en cas d'urgence pour reprogrammer."
+      },
+      "packages": {
+        "q": "Proposez-vous des forfaits ou abonnements ?",
+        "a": "Oui ! Nous offrons divers forfaits pour séances privées, duo et collectives, ainsi que des abonnements mensuels. Les forfaits offrent des économies significatives par rapport aux séances individuelles."
+      },
+      "parking": {
+        "q": "Y a-t-il un parking disponible au studio ?",
+        "a": "Oui, nous avons des places de parking dédiées pour nos clients. Le stationnement dans la rue est également disponible. Notre studio est commodément situé et accessible en transports en commun."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Rendez-Nous Visite",
+    "description": "Prêt à commencer votre voyage Pilates ? Nous serions ravis de vous accueillir",
+    "info": "Informations de Contact",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "hours": "Horaires",
+    "weekdays": "Lun-Ven: 9:00 - 19:00",
+    "weekends": "Sam-Dim: 10:00 - 12:00",
+    "whatsapp": "Message WhatsApp",
+    "bookSession": "Réserver une Séance"
+  },
+  "footer": {
+    "description": "Une nouvelle ère du Pilates à Rabat, Maroc. Bien-être de luxe conçu pour la transformation.",
+    "quickLinks": "Liens Rapides",
+    "followUs": "Suivez-Nous",
+    "rights": "Tous droits réservés.",
+    "language": "Langue"
+  },
+  "booking": {
+    "title": "Réserver une Séance",
+    "description": "Remplissez le formulaire ci-dessous et nous vous contacterons pour confirmer votre réservation.",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "service": "Type de séance",
+      "preferredDate": "Date souhaitée"
+    },
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "votre@email.com",
+      "phone": "0600000000",
+      "service": "Choisir un type de séance",
+      "date": "Sélectionner une date"
+    },
+    "errors": {
+      "nameMin": "Le nom doit contenir au moins 2 caractères",
+      "nameMax": "Le nom doit contenir moins de 100 caractères",
+      "emailInvalid": "Adresse email invalide",
+      "phoneMin": "Le téléphone doit contenir au moins 8 chiffres",
+      "phoneMax": "Le téléphone doit contenir moins de 20 caractères",
+      "serviceRequired": "Veuillez sélectionner un type de séance",
+      "dateRequired": "Veuillez sélectionner une date"
+    },
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours...",
+    "whatsappMessage": "Bonjour, je souhaite réserver une séance chez FORMA Pilates.",
+    "success": {
+      "title": "Demande envoyée !",
+      "description": "Nous vous contacterons bientôt pour confirmer votre réservation."
+    }
+  }
+}

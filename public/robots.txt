@@ -1,0 +1,23 @@
+# FORMA Pilates - Robots.txt
+# Studio de Pilates Reformer à Rabat, Maroc
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://forma-pilates.ma/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
