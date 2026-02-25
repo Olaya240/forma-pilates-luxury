@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Forma Pilates Luxury
 
-## Project info
+A modern, multilingual luxury Pilates studio website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/a491437c-3554-44e0-b4a8-87618024e581
+## Features
 
-## How can I edit this code?
+- Fully responsive design optimized for all screen sizes
+- Multilingual support (English & French) via i18n
+- Smooth scroll animations and parallax effects
+- Booking modal for class reservations
+- Sections: Hero, About, Services, Benefits, Schedule, Pricing, Gallery, Instructors, Testimonials, FAQ, Contact
+- SEO optimized with sitemap and robots.txt
+- Accessible UI components powered by shadcn/ui
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Vite** — fast build tool and dev server
+- **React** — UI library
+- **TypeScript** — type-safe JavaScript
+- **Tailwind CSS** — utility-first styling
+- **shadcn/ui** — accessible component library
+- **i18next** — internationalization
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a491437c-3554-44e0-b4a8-87618024e581) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18 or higher)
+- npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/Olaya240/forma-pilates-luxury.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd forma-pilates-luxury
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── assets/          # Images and static assets
+├── components/      # Reusable UI components
+│   └── ui/          # shadcn/ui base components
+├── hooks/           # Custom React hooks
+├── i18n/            # Internationalization config and locale files
+├── lib/             # Utility functions
+└── pages/           # Page-level components
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Build the project for production:
 
-## How can I deploy this project?
+```sh
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/a491437c-3554-44e0-b4a8-87618024e581) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The output will be in the `dist/` folder, ready to deploy to any static hosting service such as Vercel, Netlify, or GitHub Pages.
