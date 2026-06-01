@@ -7,7 +7,10 @@ const styles = `
 
   .benefits-root {
     font-family: 'Jost', sans-serif;
-    background: #0a0a0a;
+    background: 
+      radial-gradient(ellipse 900px 420px at 45% -10%, rgba(201,169,110,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 700px 420px at 85% 110%, rgba(201,169,110,0.08) 0%, transparent 65%),
+      #090909;
     position: relative;
     overflow: hidden;
   }
@@ -19,20 +22,35 @@ const styles = `
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .benefits-root::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .benefits-badge {
     font-family: 'Jost', sans-serif;
     font-weight: 200;
-    font-size: 0.62rem;
-    letter-spacing: 0.24em;
+    font-size: 0.58rem;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
     color: #c9a96e;
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    padding: 6px 14px;
+    border: 1px solid rgba(201,169,110,0.25);
+    border-radius: 999px;
+    background: rgba(201,169,110,0.05);
   }
   .benefits-badge::before {
     content: '';
@@ -46,11 +64,12 @@ const styles = `
   .benefits-title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
     color: #f5f0e8;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin: 0;
+    text-shadow: 0 18px 40px rgba(0,0,0,0.45);
   }
   .benefits-title em {
     font-style: italic;
@@ -60,99 +79,236 @@ const styles = `
   .benefits-desc {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    font-size: 0.88rem;
-    line-height: 1.85;
-    color: rgba(245,240,232,0.45);
+    font-size: 0.92rem;
+    line-height: 1.95;
+    color: rgba(245,240,232,0.52);
     margin: 0;
   }
 
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: 2.8rem;
+    font-size: 3.1rem;
     color: #c9a96e;
     line-height: 1;
+    letter-spacing: -0.01em;
   }
   .stat-label {
     font-family: 'Jost', sans-serif;
     font-weight: 200;
-    font-size: 0.58rem;
-    letter-spacing: 0.18em;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.3);
-    margin-top: 6px;
+    color: rgba(245,240,232,0.38);
+    margin-top: 8px;
   }
 
   .benefit-card {
     position: relative;
-    padding: 28px 24px;
-    border: 1px solid rgba(255,255,255,0.06);
-    background: rgba(255,255,255,0.01);
-    transition: border-color 0.35s, background 0.35s;
+    min-height: 260px;
+    padding: 38px 34px 36px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 100%),
+      #0a0a0a;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
     cursor: default;
+    overflow: hidden;
   }
+  
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(201,169,110,0.18), transparent 40%, transparent 70%, rgba(201,169,110,0.12));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .benefit-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 34px;
+    bottom: 34px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.45), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
   .benefit-card:hover {
-    border-color: rgba(201,169,110,0.25);
-    background: rgba(201,169,110,0.03);
+    border-color: rgba(201,169,110,0.28);
+    background:
+      radial-gradient(circle at 85% 15%, rgba(201,169,110,0.14), transparent 45%),
+      linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.015) 55%),
+      #0b0a09;
+    transform: translateY(-10px);
+    box-shadow: 0 34px 90px rgba(201,169,110,0.14), 0 10px 28px rgba(0,0,0,0.4);
+  }
+  
+  .benefit-card:hover::before,
+  .benefit-card:hover::after {
+    opacity: 1;
   }
 
   .benefit-icon-wrap {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(201,169,110,0.2);
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(201,169,110,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    transition: border-color 0.3s, background 0.3s;
+    margin-bottom: 22px;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    background: rgba(201,169,110,0.03);
+    border-radius: 14px;
   }
+  
   .benefit-card:hover .benefit-icon-wrap {
-    border-color: rgba(201,169,110,0.5);
-    background: rgba(201,169,110,0.06);
+    border-color: rgba(201,169,110,0.48);
+    background: rgba(201,169,110,0.12);
+    box-shadow: 0 0 34px rgba(201,169,110,0.1), inset 0 0 24px rgba(201,169,110,0.08);
+    transform: scale(1.08);
   }
 
   .benefit-title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.44rem;
     color: #f5f0e8;
-    margin: 0 0 10px 0;
+    margin: 0 0 14px 0;
     letter-spacing: 0.01em;
+    line-height: 1.2;
   }
 
   .benefit-desc {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
-    font-size: 0.78rem;
-    line-height: 1.8;
-    color: rgba(245,240,232,0.38);
+    font-size: 0.85rem;
+    line-height: 1.95;
+    color: rgba(245,240,232,0.6);
     margin: 0;
   }
 
   .card-num {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 28px;
+    right: 32px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: 0.7rem;
-    color: rgba(201,169,110,0.2);
-    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    color: rgba(201,169,110,0.25);
+    letter-spacing: 0.08em;
+    opacity: 0.7;
   }
 
   .stats-strip {
-    display: flex;
-    border: 1px solid rgba(255,255,255,0.06);
-    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-top: 56px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.025), rgba(255,255,255,0.006));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
   }
+  
   .stat-cell {
-    flex: 1;
-    padding: 24px 20px;
-    text-align: left;
-    transition: background 0.25s;
+    padding: 30px 22px;
+    text-align: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
   }
-  .stat-cell:hover { background: rgba(201,169,110,0.04); }
-  .stat-divider { width: 1px; background: rgba(255,255,255,0.06); }
+  
+  .stat-cell:hover { 
+    background: rgba(201,169,110,0.07);
+  }
+  
+  .stat-divider { 
+    width: 1px; 
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.08), transparent);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 24px;
+    background: transparent;
+  }
+
+  .benefits-grid > div:nth-child(odd) .benefit-card {
+    margin-top: 14px;
+  }
+
+  .benefits-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 96px;
+    align-items: start;
+  }
+
+  .benefits-grid-wrap {
+    position: relative;
+    padding-left: 36px;
+  }
+
+  .benefits-grid-wrap::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .benefits-layout {
+      grid-template-columns: 1fr;
+      gap: 70px;
+    }
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .benefits-grid-wrap {
+      padding-left: 0;
+    }
+    .benefits-grid-wrap::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .benefits-root { padding: 80px 0 !important; }
+    .benefits-root > div { padding: 0 20px !important; }
+    .stats-strip { 
+      grid-template-columns: 1fr;
+    }
+    .stat-divider { 
+      width: 100%; 
+      height: 1px; 
+    }
+    .benefit-card {
+      min-height: auto;
+      padding: 32px 24px;
+    }
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+    .benefits-grid > div:nth-child(odd) .benefit-card {
+      margin-top: 0;
+    }
+  }
 `;
 
 const Benefits = () => {
@@ -176,54 +332,56 @@ const Benefits = () => {
   return (
     <>
       <style>{styles}</style>
-      <section className="benefits-root" style={{ padding: "120px 0" }}>
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 80, alignItems: "start" }}>
+      <section className="benefits-root" style={{ padding: "150px 0" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+          <div className="benefits-layout">
 
-            {/* ── Left ── */}
+            {/* ── Left Side: Title + Description + Stats ── */}
             <AnimatedSection animation="fade-slide-right">
-              <div style={{ maxWidth: 460 }}>
-                <div style={{ marginBottom: 28 }}>
+              <div style={{ maxWidth: 520 }}>
+                <div style={{ marginBottom: 32 }}>
                   <span className="benefits-badge">{t("benefits.badge")}</span>
                 </div>
 
-                <h2 className="benefits-title" style={{ marginBottom: 28 }}>
+                <h2 className="benefits-title" style={{ marginBottom: 36 }}>
                   {t("benefits.title")}
                 </h2>
 
-                <div style={{ width: 40, height: 1, background: "rgba(201,169,110,0.4)", marginBottom: 28 }} />
+                <div style={{ width: 56, height: 2, background: "linear-gradient(90deg, #c9a96e 0%, rgba(201,169,110,0.2) 100%)", marginBottom: 36 }} />
 
                 <p className="benefits-desc">{t("benefits.description")}</p>
 
                 {/* Stats */}
                 <div className="stats-strip">
                   {stats.map((s, i) => (
-                    <>
-                      <div key={s.num} className="stat-cell">
+                    <div key={s.num} style={{ display: "contents" }}>
+                      <div className="stat-cell">
                         <div className="stat-num">{s.num}</div>
                         <div className="stat-label">{s.label}</div>
                       </div>
                       {i < stats.length - 1 && <div key={`d${i}`} className="stat-divider" />}
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>
             </AnimatedSection>
 
-            {/* ── Right: Benefits grid ── */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,0.04)" }}>
-              {benefits.map((benefit, index) => (
-                <AnimatedSection key={index} animation="fade-in-up" delay={100 + index * 70}>
-                  <div className="benefit-card" style={{ background: "#0a0a0a" }}>
-                    <span className="card-num">0{index + 1}</span>
-                    <div className="benefit-icon-wrap">
-                      <benefit.icon size={16} color="#c9a96e" strokeWidth={1.5} />
+            {/* ── Right Side: Benefits Grid (2 columns) ── */}
+            <div className="benefits-grid-wrap">
+              <div className="benefits-grid">
+                {benefits.map((benefit, index) => (
+                  <AnimatedSection key={index} animation="fade-in-up" delay={80 + index * 60}>
+                    <div className="benefit-card">
+                      <span className="card-num">0{index + 1}</span>
+                      <div className="benefit-icon-wrap">
+                        <benefit.icon size={20} color="#c9a96e" strokeWidth={1.3} />
+                      </div>
+                      <h3 className="benefit-title">{t(benefit.titleKey)}</h3>
+                      <p className="benefit-desc">{t(benefit.descriptionKey)}</p>
                     </div>
-                    <h3 className="benefit-title">{t(benefit.titleKey)}</h3>
-                    <p className="benefit-desc">{t(benefit.descriptionKey)}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
 
           </div>

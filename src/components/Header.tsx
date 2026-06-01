@@ -10,6 +10,26 @@ const styles = `
     font-family: 'Jost', sans-serif;
   }
 
+  .header-shell {
+    position: relative;
+  }
+
+  .header-shell::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
+      rgba(8,8,7,0.32);
+    box-shadow: 0 18px 70px rgba(0,0,0,0.22);
+    opacity: var(--shell-opacity, 0);
+    transform: scaleX(var(--shell-scale, 0.98));
+    transform-origin: center;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+
   .header-logo {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
@@ -19,6 +39,27 @@ const styles = `
     line-height: 1;
     cursor: pointer;
     user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(201,169,110,0.42);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9a96e;
+    font-size: 0.7rem;
+    line-height: 1;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+
+  .header-logo:hover .logo-mark {
+    transform: rotate(45deg);
+    border-color: rgba(201,169,110,0.85);
   }
 
   .header-logo em {
@@ -40,6 +81,11 @@ const styles = `
     padding: 4px 0;
     position: relative;
     transition: color 0.25s;
+  }
+
+  .nav-link span {
+    position: relative;
+    z-index: 1;
   }
 
   .nav-link::after {
@@ -73,12 +119,15 @@ const styles = `
     padding: 0.55rem 1.4rem;
     border-radius: 0;
     cursor: pointer;
-    transition: background 0.25s;
+    transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
     white-space: nowrap;
+    box-shadow: 0 14px 30px rgba(201,169,110,0.12);
   }
 
   .header-book-btn:hover {
     background: #b8924f;
+    transform: translateY(-1px);
+    box-shadow: 0 18px 42px rgba(201,169,110,0.18);
   }
 
   .mobile-menu-btn {
@@ -135,17 +184,35 @@ const styles = `
     height: 16px;
     background: rgba(255,255,255,0.12);
   }
+
+  .scroll-progress {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a96e 20%, #f5f0e8 55%, #c9a96e);
+    box-shadow: 0 0 18px rgba(201,169,110,0.55);
+    transform-origin: left;
+    transition: transform 0.08s linear;
+  }
 `;
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const doc = document.documentElement;
+      const scrollable = Math.max(1, doc.scrollHeight - window.innerHeight);
+      setIsScrolled(window.scrollY > 50);
+      setScrollProgress(Math.min(1, window.scrollY / scrollable));
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -181,23 +248,27 @@ const Header = () => {
           zIndex: 50,
           transition: "background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.3s ease",
           background: isScrolled ? scrolledBg : transparentBg,
-          backdropFilter: isScrolled ? "blur(16px)" : "none",
-          WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
+          backdropFilter: isScrolled ? "blur(18px)" : "none",
+          WebkitBackdropFilter: isScrolled ? "blur(18px)" : "none",
           borderBottom: isScrolled
             ? "1px solid rgba(255,255,255,0.06)"
             : "1px solid transparent",
-          padding: isScrolled ? "18px 0" : "28px 0",
+          padding: isScrolled ? "14px 0" : "28px 0",
         }}
       >
         <div
+          className="header-shell"
           style={{
             maxWidth: 1280,
             margin: "0 auto",
-            padding: "0 40px",
+            padding: isScrolled ? "10px 22px" : "0 40px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             gap: 24,
+            transition: "padding 0.35s ease",
+            ["--shell-opacity" as string]: isScrolled ? 1 : 0,
+            ["--shell-scale" as string]: isScrolled ? 1 : 0.98,
           }}
         >
           {/* Logo */}
@@ -205,7 +276,8 @@ const Header = () => {
             className="header-logo"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            FORMA <em>Pilates</em>
+            <span className="logo-mark">F</span>
+            <span>FORMA <em>Pilates</em></span>
           </div>
 
           {/* Desktop Nav */}
@@ -224,7 +296,7 @@ const Header = () => {
                 className="nav-link"
                 onClick={() => scrollToSection(item.id)}
               >
-                {item.label}
+                <span>{item.label}</span>
               </button>
             ))}
 
@@ -247,6 +319,11 @@ const Header = () => {
             {isMobileMenuOpen ? <X size={15} /> : <Menu size={15} />}
           </button>
         </div>
+
+        <div
+          className="scroll-progress"
+          style={{ width: "100%", transform: `scaleX(${scrollProgress})` }}
+        />
 
         {/* Mobile Nav panel */}
         {isMobileMenuOpen && (

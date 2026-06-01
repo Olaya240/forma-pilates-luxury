@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +9,6 @@
    Dark luxury editorial. Cormorant Garamond + Jost.
    All colors in HSL.
 ───────────────────────────────────────────────────────────── */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
 
 @layer base {
   :root {
@@ -84,6 +84,34 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background:
+      linear-gradient(180deg, hsl(20 8% 4%) 0%, hsl(26 10% 5%) 46%, hsl(20 8% 4%) 100%);
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(to bottom, transparent, black 22%, black 78%, transparent);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 18% 18%, hsl(var(--accent) / 0.08), transparent 26%),
+      radial-gradient(circle at 82% 42%, rgba(255,255,255,0.045), transparent 24%),
+      radial-gradient(circle at 50% 88%, hsl(var(--accent) / 0.055), transparent 28%);
   }
 
   /* Headings default to Cormorant */
@@ -302,6 +330,124 @@
   .btn-ghost:hover {
     border-color: hsl(var(--accent) / 0.4);
     color: hsl(var(--accent));
+  }
+}
+
+@layer components {
+  .srv-card,
+  .prc-card,
+  .benefit-card,
+  .tst-card,
+  .info-panel,
+  .map-panel,
+  .gal-item,
+  .image-wrap {
+    isolation: isolate;
+  }
+
+  .srv-card,
+  .prc-card,
+  .benefit-card,
+  .tst-card,
+  .info-panel {
+    position: relative;
+    box-shadow: 0 18px 70px rgba(0,0,0,0);
+    transition:
+      transform 0.45s var(--ease-out),
+      border-color 0.35s ease,
+      background 0.35s ease,
+      box-shadow 0.45s ease,
+      filter 0.45s ease;
+  }
+
+  .srv-card::before,
+  .prc-card::before,
+  .benefit-card::before,
+  .tst-card::before,
+  .info-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.08), transparent 34%),
+      radial-gradient(circle at 20% 0%, hsl(var(--accent) / 0.12), transparent 34%);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+
+  .srv-card:hover,
+  .prc-card:hover,
+  .benefit-card:hover,
+  .tst-card:hover,
+  .info-panel:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 85px rgba(0,0,0,0.24);
+  }
+
+  .srv-card:hover::before,
+  .prc-card:hover::before,
+  .benefit-card:hover::before,
+  .tst-card:hover::before,
+  .info-panel:hover::before {
+    opacity: 1;
+  }
+
+  .srv-card.featured,
+  .prc-card.featured {
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.16),
+      0 30px 90px rgba(0,0,0,0.18),
+      0 0 70px hsl(var(--accent) / 0.055);
+  }
+
+  .gal-item::after,
+  .image-wrap::after,
+  .map-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 8%, rgba(255,255,255,0.12), transparent 42%);
+    transform: translateX(-120%);
+    transition: transform 0.7s var(--ease-out);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .gal-item:hover::after,
+  .image-frame:hover .image-wrap::after,
+  .map-panel:hover::before {
+    transform: translateX(120%);
+  }
+
+  .btn-gold,
+  .btn-modern,
+  .srv-btn-primary,
+  .prc-btn-gold,
+  .header-book-btn,
+  .btn-whatsapp {
+    box-shadow: 0 16px 40px hsl(var(--accent) / 0.12);
+  }
+
+  .btn-gold:hover,
+  .btn-modern:hover,
+  .srv-btn-primary:hover,
+  .prc-btn-gold:hover,
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 52px hsl(var(--accent) / 0.18);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }
 
